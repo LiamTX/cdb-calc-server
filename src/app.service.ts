@@ -54,10 +54,12 @@ export class AppService extends BaseService<CdiHistory> {
 
     let calcResult = [];
     await mapSeries(cdiHistories, async cdi => {
-      const cdiRate = (cdi.dLastTradePrice / 100 + 1) / 1 / 252 - 1;
-      console.log(cdiRate);
+      const cdiRate = Math.pow(cdi.dLastTradePrice / 100 + 1, 1 / 252) - 1;
+      const tcdiAccumulated = cdiHistories.length * (1 + cdiRate * data.cdbRate / 100)
+      console.log(tcdiAccumulated);
 
-      // calcResult.push({ date: cdi.dtDate, unitPrice: unitCdb });
+      const unitCdb = 1000 * tcdiAccumulated
+      calcResult.push({ date: cdi.dtDate, unitPrice: unitCdb });
     });
 
     return calcResult;
