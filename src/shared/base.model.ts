@@ -3,6 +3,7 @@ import { buildSchema, modelOptions, prop, Severity } from '@typegoose/typegoose'
 import { ApiHideProperty } from '@nestjs/swagger';
 
 
+// BaseModel helps to create new models
 export abstract class BaseModel {
   @prop()
   @ApiHideProperty()

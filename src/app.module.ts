@@ -15,7 +15,9 @@ require('dotenv').config();
       useUnifiedTopology: true,
       useFindAndModify: false,
     }),
+    // Sign new models
     TypegooseModule.forFeature([CdiHistory]),
+    // Set the csv upload folder
     MulterModule.registerAsync({
       useFactory: () => ({
         dest: './upload',

@@ -14,6 +14,7 @@ type QueryItem<T extends BaseModel> = DocumentQuery<
   DocumentType<T>
 >;
 
+// BaseService Helps to create new services
 export abstract class BaseService<T extends BaseModel> {
   protected model: ReturnModelType<AnyParamConstructor<T>>;
 

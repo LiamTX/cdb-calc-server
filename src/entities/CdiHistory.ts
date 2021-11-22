@@ -1,5 +1,6 @@
 import { prop } from "@typegoose/typegoose";
 
+// Cdi history model
 export class CdiHistory {
     _id?: string;
 
