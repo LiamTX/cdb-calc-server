@@ -2,8 +2,8 @@ import { Body, Controller, Get, Post, UploadedFile, UseInterceptors } from '@nes
 import { FileInterceptor } from '@nestjs/platform-express';
 import { ApiBody, ApiConsumes, ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { AppService } from './app.service';
-import {CalcCdbValueResponse} from './dtos/calc-cdb-value-response.dto';
-import {CalcCdbValue} from './dtos/calc-cdb-value.dto';
+import { CalcCdbValueResponse } from './dtos/calc-cdb-value-response.dto';
+import { CalcCdbValueRequest } from './dtos/calc-cdb-value.dto';
 
 @ApiTags('APP')
 @Controller('/api')
@@ -30,9 +30,9 @@ export class AppController {
     return await this.appService.uploadCdiHistory(file);
   }
 
-  @Post('/cdi')
+  @Post('/cdb')
   @ApiResponse({ status: 200, type: CalcCdbValueResponse })
-  async calcCdbValue(@Body() data: CalcCdbValue) {
+  async calcCdbValue(@Body() data: CalcCdbValueRequest) {
     return await this.appService.calcCdbValue(data);
   }
 }

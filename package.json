@@ -1,5 +1,5 @@
 {
-  "name": "nest-mongo-setup",
+  "name": "cdb-calc-server",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -28,6 +28,7 @@
     "@nestjs/swagger": "^4.8.0",
     "@typegoose/typegoose": "^7.6.1",
     "csv-parser": "^3.0.0",
+    "date-fns": "^2.26.0",
     "dotenv": "^10.0.0",
     "mongodb": "^3.6.9",
     "mongoose": "5.10.14",
@@ -44,6 +45,7 @@
     "@nestjs/cli": "^7.6.0",
     "@nestjs/schematics": "^7.3.0",
     "@nestjs/testing": "^7.6.15",
+    "@types/date-fns": "^2.6.0",
     "@types/express": "^4.17.11",
     "@types/jest": "^26.0.22",
     "@types/mongoose": "^5.11.97",

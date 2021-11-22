@@ -1,6 +1,6 @@
 import { ApiProperty } from "@nestjs/swagger";
 
-export class CalcCdbValue {
+export class CalcCdbValueRequest {
     @ApiProperty()
     investmentDate: string;
 
