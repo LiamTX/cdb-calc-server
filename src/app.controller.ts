@@ -1,4 +1,4 @@
-import { Body, Controller, Post, UploadedFile, UseInterceptors } from '@nestjs/common';
+import { Body, Controller, Get, Post, UploadedFile, UseInterceptors } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { ApiBody, ApiConsumes, ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { AppService } from './app.service';
@@ -9,6 +9,11 @@ import { CalcCdbValueRequest } from './dtos/calc-cdb-value.dto';
 @Controller('/api')
 export class AppController {
   constructor(private readonly appService: AppService) { }
+
+  @Get()
+  healthCheck() {
+    return 'WORKING';
+  }
 
   @Post('/upload/cdi')
   @UseInterceptors(FileInterceptor('file'))
