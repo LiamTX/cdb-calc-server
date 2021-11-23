@@ -1,4 +1,4 @@
-## Installation
+### Installation
 
 ```bash
 $ yarn install
@@ -12,12 +12,12 @@ $ docker run -p 27018:27017 -d -t mongo:4.2-bionic
 
 ## Or create a free cluster on mongo atlas
 
-## Create ".env" file on project root
+### Create ".env" file on project root
 ```
 MONGO_URI="{insert the database uri}"
 ```
 
-## Running the app
+### Running the app
 
 ```bash
 # development
@@ -30,7 +30,7 @@ $ yarn run start:dev
 $ yarn run start:prod
 ```
 
-## To access the doc api go to
+### To access the doc api go to
 ```
 '{api path}:3003/doc'
 ```
