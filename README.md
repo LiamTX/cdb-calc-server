@@ -34,3 +34,8 @@ $ yarn run start:prod
 ```
 '{api path}:3003/doc'
 ```
+
+# You can upload a csv file with cdi history on
+```
+'{api path}:3003/api/upload/cdi
+```
