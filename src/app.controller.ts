@@ -11,6 +11,7 @@ export class AppController {
   constructor(private readonly appService: AppService) { }
 
   @Get()
+  @ApiOperation({ description: 'Health Check endpoint' })
   healthCheck() {
     return 'WORKING';
   }
